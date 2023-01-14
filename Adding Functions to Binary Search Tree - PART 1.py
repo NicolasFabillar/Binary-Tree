@@ -57,6 +57,14 @@ class BinarySearchTreeNode:
     def find_max(self): # finds maximum element in entire binary tree.
         return self.in_order_traversal()[-1]
 
+    def calculate_sum(self): # calcualtes sum of all elements
+        elements = self.in_order_traversal()
+        Total_Value = 0
+        for i in range(len(elements)):
+            Total_Value += elements[i]
+
+        return Total_Value
+
 
 def build_tree(elements):
     print("Building tree with these elements:",elements)
@@ -72,3 +80,4 @@ if __name__ == '__main__':
     print("\nIn order traversal gives this sorted list:",numbers_tree.in_order_traversal())
     print("The minimum element in the list is:",numbers_tree.find_min())
     print("The maximum element in the list is:", numbers_tree.find_max())
+    print("The total value of the elemets are:", numbers_tree.calculate_sum())
