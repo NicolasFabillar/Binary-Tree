@@ -115,9 +115,9 @@ class BinarySearchTreeNode:
             elif self.right is None:
                 return self.left
 
-            min_val = self.right.find_min()
-            self.data = min_val
-            self.right = self.right.delete(min_val)
+            max_val = self.left.find_max()
+            self.data = max_val
+            self.left = self.left.delete(max_val)
 
         return self
 
@@ -138,3 +138,16 @@ if __name__ == '__main__':
     print("After deleting a ", name_tree.in_order_traversal()) # a should be removed
     name_tree.delete("d")
     print("After deleting d ", name_tree.in_order_traversal())  # d should be removed
+    name_tree.delete("x")
+    print("After deleting x ", name_tree.in_order_traversal())  # x should be removed
+
+
+    print()
+    numbers_tree = build_tree([17, 4, 3, 20, 18, 30, 29, 9, 23, 18, 34, 55, 70])
+    print("\nIn order traversal gives this sorted list:", numbers_tree.in_order_traversal())
+    numbers_tree.delete(17)
+    print("After deleting 17", numbers_tree.in_order_traversal())  # 17 should be removed
+    numbers_tree.delete(3)
+    print("After deleting 3 ", numbers_tree.in_order_traversal())  # 3 should be removed
+    numbers_tree.delete(34)
+    print("After deleting 34", numbers_tree.in_order_traversal())  # 70 should be removed

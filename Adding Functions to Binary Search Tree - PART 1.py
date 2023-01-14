@@ -116,6 +116,7 @@ if __name__ == '__main__':
     print("\nIn order traversal gives this sorted list:", name_tree.in_order_traversal())
     print("The minimum element in the list is:", name_tree.find_min())
     print("The maximum element in the list is:", name_tree.find_max())
+    print("Is the element e present in the list? :", name_tree.search("e"))
     print("\nPre order traversal gives this sorted list:", name_tree.pre_order_traversal())
     print("Post order traversal gives this sorted list:", name_tree.post_order_traversal())
 
@@ -124,6 +125,7 @@ if __name__ == '__main__':
     print("\nIn order traversal gives this sorted list:",numbers_tree.in_order_traversal())
     print("The minimum element in the list is:",numbers_tree.find_min())
     print("The maximum element in the list is:", numbers_tree.find_max())
+    print("Is the element 200 present in the list? :", numbers_tree.search(200))
     print("The total value of the elements are:", numbers_tree.calculate_sum())
     print("\nPre order traversal gives this sorted list:",numbers_tree.pre_order_traversal())
     print("Post order traversal gives this sorted list:", numbers_tree.post_order_traversal())
