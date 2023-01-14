@@ -107,10 +107,19 @@ def build_tree(elements):
     return root
 
 if __name__ == '__main__':
+    name_tree = build_tree(["n", "i", "c", "o", "l", "a", "s", "a", "l", "e", "x", "a",
+                           "n", "d", "e", "r", "a", "f", "a", "b", "i", "l", "l", "a", "r"])
+    print("\nIn order traversal gives this sorted list:", name_tree.in_order_traversal())
+    print("The minimum element in the list is:", name_tree.find_min())
+    print("The maximum element in the list is:", name_tree.find_max())
+    print("\nPre order traversal gives this sorted list:", name_tree.pre_order_traversal())
+    print("Post order traversal gives this sorted list:", name_tree.post_order_traversal())
+
+    print()
     numbers_tree = build_tree([17, 4, 3, 20, 18, 30, 29, 9, 23, 18, 34, 55, 70])
     print("\nIn order traversal gives this sorted list:",numbers_tree.in_order_traversal())
     print("The minimum element in the list is:",numbers_tree.find_min())
     print("The maximum element in the list is:", numbers_tree.find_max())
     print("The total value of the elements are:", numbers_tree.calculate_sum())
     print("\nPre order traversal gives this sorted list:",numbers_tree.pre_order_traversal())
-    print("\nPost order traversal gives this sorted list:", numbers_tree.post_order_traversal())
+    print("Post order traversal gives this sorted list:", numbers_tree.post_order_traversal())
