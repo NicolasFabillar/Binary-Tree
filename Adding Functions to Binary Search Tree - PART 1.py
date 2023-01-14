@@ -52,10 +52,14 @@ class BinarySearchTreeNode:
         return elements
 
     def find_min(self): #finds minimum element in entire binary tree.
-        return self.in_order_traversal()[0]
+        if self.left is None:
+            return self.data
+        return self.left.find_min()
 
     def find_max(self): # finds maximum element in entire binary tree.
-        return self.in_order_traversal()[-1]
+        if self.right is None:
+            return self.data
+        return self.right.find_max()
 
     def calculate_sum(self): # calcualtes sum of all elements
         elements = self.in_order_traversal()
