@@ -54,6 +54,9 @@ class BinarySearchTreeNode:
     def find_min(self): #finds minimum element in entire binary tree.
         return self.in_order_traversal()[0]
 
+    def find_max(self): # finds maximum element in entire binary tree.
+        return self.in_order_traversal()[-1]
+
 
 def build_tree(elements):
     print("Building tree with these elements:",elements)
@@ -67,4 +70,5 @@ def build_tree(elements):
 if __name__ == '__main__':
     numbers_tree = build_tree([17, 4, 3, 20, 18, 30, 29, 9, 23, 18, 34, 55, 70])
     print("\nIn order traversal gives this sorted list:",numbers_tree.in_order_traversal())
-    print("The minimum element in the least is:",numbers_tree.find_min())
+    print("The minimum element in the list is:",numbers_tree.find_min())
+    print("The maximum element in the list is:", numbers_tree.find_max())
