@@ -51,6 +51,9 @@ class BinarySearchTreeNode:
 
         return elements
 
+    def find_min(self): #finds minimum element in entire binary tree.
+        return self.in_order_traversal()[0]
+
 
 def build_tree(elements):
     print("Building tree with these elements:",elements)
@@ -62,11 +65,6 @@ def build_tree(elements):
     return root
 
 if __name__ == '__main__':
-    countries = ["India","Pakistan","Germany", "USA","China","India","UK","USA"]
-    country_tree = build_tree(countries)
-
-    print("UK is in the list? ", country_tree.search("UK"))
-    print("Sweden is in the list? ", country_tree.search("Sweden"))
-
-    numbers_tree = build_tree([17, 4, 1, 20, 9, 23, 18, 34])
-    print("In order traversal gives this sorted list:",numbers_tree.in_order_traversal())
+    numbers_tree = build_tree([17, 4, 3, 20, 18, 30, 29, 9, 23, 18, 34, 55, 70])
+    print("\nIn order traversal gives this sorted list:",numbers_tree.in_order_traversal())
+    print("The minimum element in the least is:",numbers_tree.find_min())
